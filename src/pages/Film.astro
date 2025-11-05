@@ -1,0 +1,63 @@
+---
+layout: null
+import { YouTube } from "astro-embed";
+---
+
+<!-- Background applied to whole page -->
+<style>
+  body {
+    background-image: url('/images/FILMBACK.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+  }
+</style>
+
+<!-- NAVIGATION -->
+<header class="fixed top-6 left-0 right-0 flex justify-center z-50">
+  <nav class="flex space-x-10 text-white font-bold text-xl tracking-wide">
+    <a href="/Film" class="hover:text-red-400 transition">Film</a>
+    <a href="/Writing" class="hover:text-red-400 transition">Writing / Photography</a>
+    <a href="/Music" class="hover:text-red-400 transition">Music</a>
+  </nav>
+</header>
+
+<!-- BACK/HOME BUTTON -->
+<a
+  href="/"
+  class="fixed top-6 left-6 px-4 py-2 bg-gray-300 hover:bg-gray-400 text-black font-semibold transition shadow-md z-50"
+>
+  Home
+</a>
+
+<div class="min-h-screen w-full flex flex-col items-center pt-32 pb-24">
+
+  <!-- Title -->
+  <h1 class="text-5xl md:text-6xl font-bold text-white text-center mb-20 drop-shadow-lg tracking-wide">
+    My Films
+  </h1>
+
+<!-- Video Container -->
+<div class="w-full flex flex-col items-center pt-10 gap-20">
+
+  <!-- YouTube Embed #1 -->
+  <div class="flex justify-center w-full">
+    <div class="w-full max-w-[1200px] aspect-video rounded-lg overflow-hidden shadow-xl mx-auto justify-center">
+      <YouTube id="LsS-IoYr38w" />
+    </div>
+  </div>
+
+  <!-- YouTube Embed #2 -->
+  <div class="flex justify-center w-full">
+    <div class="w-full max-w-[1200px] aspect-video rounded-lg overflow-hidden shadow-xl mx-auto">
+      <YouTube id="zquHRgzuSM4" />
+    </div>
+  </div>
+
+</div>
+
+
+</div>

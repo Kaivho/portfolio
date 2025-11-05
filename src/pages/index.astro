@@ -1,0 +1,96 @@
+---
+import "../styles/global.css";
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[Your Name] Portfolio</title>
+  </head>
+  <body
+    class="relative min-h-screen bg-cover bg-center"
+    style="background-image: url('/images/Hero.jpg');"
+  >
+    <!-- Top links -->
+    <header
+      class="absolute top-4 left-0 right-0 flex justify-center space-x-6 text-white font-semibold z-10"
+    >
+      <a href="/Film" class="hover:text-blue-400 transition">Film</a>
+      <a href="/writing" class="hover:text-blue-400 transition"
+        >Writing / Photography</a
+      >
+      <a href="/music" class="hover:text-blue-400 transition">Music</a>
+    </header>
+
+    <!-- Bottom About / Contact button -->
+    <footer class="absolute bottom-6 left-0 right-0 text-center z-10">
+      <button
+        id="aboutButton"
+        class="inline-block px-6 py-2 bg-stone-600 hover:bg-red-600 text-white font-beauty transition"
+      >
+        About / Contact
+      </button>
+    </footer>
+
+<!-- Modal popup -->
+<div
+  id="aboutModal"
+  class="fixed inset-0 bg-black/50 flex items-center justify-center hidden z-50"
+>
+  <div
+    class="bg-stone-600 text-white p-6 max-w-md mx-4 shadow-lg relative"
+  >
+    <!-- Close button -->
+    <button
+      id="closeModal"
+      class="absolute top-2 right-2 text-black dark:text-white font-bold text-xl"
+    >
+      &times;
+    </button>
+
+    <h2 class="text-2xl font-bold mb-4 text-center">About Me / Contact</h2>
+
+    <p class="mt-2 text-center font-bold">kaivho</p>
+    <p class="mt-2 text-center">Filmmaker, Writer, Musician</p>
+    <p class="mt-2 text-center">
+      I have many passions but above all I am a creator. My goal with all of my work is to build a world in which you can step in and blur the noise outside.
+    </p>
+    <p class="mt-2 text-center font-bold">Houston Based</p>
+
+    <!-- Contact Section -->
+    <div class="mt-6 border-t border-gray-300 pt-4 text-center space-y-2">
+      <p>📞 <a href="tel:+18329846040" class="text-blue-500 hover:underline">+1 (832) 984 6040</a></p>
+      <p>✉️ <a href="mailto:maximoskvh@gmail.com" class="text-blue-500 hover:underline">Maximoskvh@gmail.com</a></p>
+      <p>
+        🔗 
+        <a href="https://www.instagram.com/kaivho.ss1/" target="_blank" class="text-blue-500 hover:underline">Instagram</a> | 
+        <a href="https://x.com/MaximosKvh" target="_blank" class="text-blue-500 hover:underline">X</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Modal toggle script -->
+    <script>
+      const button = document.getElementById("aboutButton");
+      const modal = document.getElementById("aboutModal");
+      const close = document.getElementById("closeModal");
+
+      button.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+      });
+
+      close.addEventListener("click", () => {
+        modal.classList.add("hidden");
+      });
+
+      // Close modal if clicking outside the content
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
